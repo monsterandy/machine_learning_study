@@ -293,13 +293,6 @@ def train_nn_classification_model(
     # of training with num_epochs passed to the input_fn. Or, you can do a really-big shuffle,
     # or since it's in-memory data, shuffle all the data in the `input_fn`.
     steps_per_period = steps / periods
-    # Create the input functions.
-    predict_training_input_fn = create_predict_input_fn(
-        training_examples, training_targets, batch_size)
-    predict_validation_input_fn = create_predict_input_fn(
-        validation_examples, validation_targets, batch_size)
-    training_input_fn = create_training_input_fn(
-        training_examples, training_targets, batch_size)
 
     # Create the input functions.
     predict_training_input_fn = create_predict_input_fn(
